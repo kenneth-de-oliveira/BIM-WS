@@ -1,0 +1,11 @@
+
+ws:
+ ## Configuration for the Inventory Management Web Service
+  inventory:
+    management:
+
+      classPathResource: wsdl/InventoryManagementWS.xsd
+      namespaceUri: http://com.example/BIM-WS
+      locationUri: /BIM-WS/InventoryManagementWS
+      serviceName: InventoryManagementWS
+      portTypeName: InventoryManagementWSPort

@@ -1,0 +1,7 @@
+____  _ _ __  __    __        __ ____
+| __ )(_) |  \/  |  \ \      / // ___|
+|  _ \| | | |\/| |___\ \ /\ / / \___ \
+| |_) | | | |  | |___ \ V  V /   ___) |
+|____/|_|_|_|  |_|     \_/\_/   |____/
+${AnsiColor.GREEN} :: Spring Boot :: ${AnsiColor.GREEN}     ${AnsiColor.MAGENTA} ${spring-boot.formatted-version}
+${AnsiColor.BLACK}

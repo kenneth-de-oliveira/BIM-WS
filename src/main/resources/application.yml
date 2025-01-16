@@ -1,0 +1,12 @@
+server:
+  port: '8080'
+
+spring:
+  config:
+    import: "config.yml"
+
+  application:
+    name: BIM-WS
+
+  profiles:
+    active: dev

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://com.example/BIM-WS"
+	targetNamespace="http://com.example/BIM-WS"
+    elementFormDefault="qualified">
+
+	<xs:element name="BookRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Book" type="tns:Book" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteCategoryRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:long"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="DeleteBookRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="isbn" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="SearchBookRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Book" type="tns:SearchBook" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="BookResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Book" type="tns:SearchBook" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="Book">
+		<xs:sequence>
+			<xs:element name="id" type="xs:long"/>
+			<xs:element name="title" type="xs:string"/>
+			<xs:element name="authorName" type="xs:string"/>
+			<xs:element name="text" type="xs:string"/>
+			<xs:element name="isbn" type="xs:string"/>
+			<xs:element name="categoryId" type="xs:long"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="SearchBook">
+		<xs:sequence>
+			<xs:element name="id" type="xs:long"/>
+			<xs:element name="title" type="xs:string"/>
+			<xs:element name="authorName" type="xs:string"/>
+			<xs:element name="text" type="xs:string"/>
+			<xs:element name="isbn" type="xs:string"/>
+			<xs:element name="category" type="tns:SearchCategory"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="CategoryResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="category" type="tns:SearchCategory" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="CategoryRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="category" type="tns:SearchCategory" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="SearchCategoryRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="category" type="tns:SearchCategory" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="SearchCategory">
+		<xs:sequence>
+			<xs:element name="id" type="xs:long"/>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="description" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
