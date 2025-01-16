@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="32c9af08-246f-4b39-b439-33c81ce150e2" activeEnvironment="Default" name="InventoryManagementWS" resourceRoot="${projectDir}" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="1deb51f8-5ee5-4e20-aa12-79259b7f1ecc" wsaVersion="NONE" name="InventoryManagementWSPortSoap11" type="wsdl" bindingName="{http://com.example/BIM-WS}InventoryManagementWSPortSoap11" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/BIM-WS/InventoryManagementWS.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/BIM-WS/InventoryManagementWS.wsdl"><con:part><con:url>http://localhost:8080/BIM-WS/InventoryManagementWS.wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://com.example/BIM-WS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://com.example/BIM-WS" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://com.example/BIM-WS">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://com.example/BIM-WS" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="BookRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Book" type="tns:Book"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteCategoryRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteBookRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="isbn" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SearchBookRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Book" type="tns:SearchBook"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BookResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="Book" type="tns:SearchBook"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="Book">
+        <xs:sequence>
+          <xs:element name="id" type="xs:long"/>
+          <xs:element name="title" type="xs:string"/>
+          <xs:element name="authorName" type="xs:string"/>
+          <xs:element name="text" type="xs:string"/>
+          <xs:element name="isbn" type="xs:string"/>
+          <xs:element name="categoryId" type="xs:long"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="SearchBook">
+        <xs:sequence>
+          <xs:element name="id" type="xs:long"/>
+          <xs:element name="title" type="xs:string"/>
+          <xs:element name="authorName" type="xs:string"/>
+          <xs:element name="text" type="xs:string"/>
+          <xs:element name="isbn" type="xs:string"/>
+          <xs:element name="category" type="tns:SearchCategory"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CategoryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="category" type="tns:SearchCategory"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CategoryRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="category" type="tns:SearchCategory"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SearchCategoryRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="category" type="tns:SearchCategory"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="SearchCategory">
+        <xs:sequence>
+          <xs:element name="id" type="xs:long"/>
+          <xs:element name="name" type="xs:string"/>
+          <xs:element name="description" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="BookRequest">
+    <wsdl:part element="tns:BookRequest" name="BookRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SearchCategoryRequest">
+    <wsdl:part element="tns:SearchCategoryRequest" name="SearchCategoryRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DeleteBookRequest">
+    <wsdl:part element="tns:DeleteBookRequest" name="DeleteBookRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CategoryResponse">
+    <wsdl:part element="tns:CategoryResponse" name="CategoryResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="BookResponse">
+    <wsdl:part element="tns:BookResponse" name="BookResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="DeleteCategoryRequest">
+    <wsdl:part element="tns:DeleteCategoryRequest" name="DeleteCategoryRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SearchBookRequest">
+    <wsdl:part element="tns:SearchBookRequest" name="SearchBookRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CategoryRequest">
+    <wsdl:part element="tns:CategoryRequest" name="CategoryRequest"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="InventoryManagementWSPort">
+    <wsdl:operation name="Book">
+      <wsdl:input message="tns:BookRequest" name="BookRequest"></wsdl:input>
+      <wsdl:output message="tns:BookResponse" name="BookResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCategory">
+      <wsdl:input message="tns:SearchCategoryRequest" name="SearchCategoryRequest"></wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBook">
+      <wsdl:input message="tns:DeleteBookRequest" name="DeleteBookRequest"></wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Category">
+      <wsdl:input message="tns:CategoryRequest" name="CategoryRequest"></wsdl:input>
+      <wsdl:output message="tns:CategoryResponse" name="CategoryResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCategory">
+      <wsdl:input message="tns:DeleteCategoryRequest" name="DeleteCategoryRequest"></wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBook">
+      <wsdl:input message="tns:SearchBookRequest" name="SearchBookRequest"></wsdl:input>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InventoryManagementWSPortSoap11" type="tns:InventoryManagementWSPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Book">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="BookRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="BookResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchCategory">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="SearchCategoryRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBook">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="DeleteBookRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Category">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="CategoryRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="CategoryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCategory">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="DeleteCategoryRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBook">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="SearchBookRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InventoryManagementWSPortService">
+    <wsdl:port binding="tns:InventoryManagementWSPortSoap11" name="InventoryManagementWSPortSoap11">
+      <soap:address location="http://localhost:8080/BIM-WS/InventoryManagementWS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/BIM-WS/InventoryManagementWS</con:endpoint></con:endpoints><con:operation id="55c8d998-6a3a-428d-9155-77c44dc7f953" isOneWay="false" action="" name="Book" bindingOperationName="Book" type="Request-Response" outputName="BookResponse" inputName="BookRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3bd5cf9a-4910-42b0-876e-44841c35622d" name="saveOrUpdate"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BIM-WS/InventoryManagementWS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bim:BookRequest>
+         <bim:Book>
+            <bim:title>The Catcher in the Rye</bim:title>
+            <bim:authorName>J.D. Salinger</bim:authorName>
+            <bim:text>A story about teenage rebellion.</bim:text>
+            <bim:isbn>9780316769488</bim:isbn>
+            <bim:categoryId>1</bim:categoryId>
+         </bim:Book>
+      </bim:BookRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://com.example/BIM-WS/InventoryManagementWSPort/BookRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="eedc16a6-961b-4bf3-b185-2ca9ee98ab60" isOneWay="false" action="" name="Category" bindingOperationName="Category" type="Request-Response" outputName="CategoryResponse" inputName="CategoryRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="117288e7-7c88-4e2c-ad57-b50110554387" name="saveOrUpdate"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BIM-WS/InventoryManagementWS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <bim:CategoryRequest>\r
+         <bim:category>\r
+            <bim:name>Biography</bim:name>\r
+            <bim:description>Biographical books</bim:description>\r
+         </bim:category>\r
+      </bim:CategoryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://com.example/BIM-WS/InventoryManagementWSPort/CategoryRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="a2c0a5d6-9b74-4e3e-b695-f69cd4dfeb05" isOneWay="false" action="" name="DeleteBook" bindingOperationName="DeleteBook" type="One-Way" inputName="DeleteBookRequest" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9d0e487b-245a-4b20-a86b-6aaadc052f48" name="deleteByIsbn"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BIM-WS/InventoryManagementWS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bim:DeleteBookRequest>
+         <bim:isbn>9780134685991</bim:isbn>
+      </bim:DeleteBookRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://com.example/BIM-WS/InventoryManagementWSPort/DeleteBookRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="45d1aef0-d968-4da0-9dae-1d075e1ebca5" isOneWay="false" action="" name="DeleteCategory" bindingOperationName="DeleteCategory" type="One-Way" inputName="DeleteCategoryRequest" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a8013b3d-8691-44b5-a1ff-e1605dc1cfa3" name="deleteById"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BIM-WS/InventoryManagementWS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <bim:DeleteCategoryRequest>\r
+         <bim:id>12</bim:id>\r
+      </bim:DeleteCategoryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://com.example/BIM-WS/InventoryManagementWSPort/DeleteCategoryRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="15b0ede1-b89e-43fa-b21b-7005f7199a57" isOneWay="false" action="" name="SearchBook" bindingOperationName="SearchBook" type="One-Way" inputName="SearchBookRequest" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f85b1eeb-c1d6-4e78-a9bd-207c027bab02" name="findAll"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BIM-WS/InventoryManagementWS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
+   <soapenv:Header/>
+   <soapenv:Body>
+         <bim:retrieveAllBooks/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://com.example/BIM-WS/InventoryManagementWSPort/SearchBookRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="9dc9b692-b3ac-44e9-a576-f4d85979385e" name="findByIsbn"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BIM-WS/InventoryManagementWS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bim:SearchBookRequest>
+         <bim:Book>
+            <bim:isbn>9780134685991</bim:isbn>
+         </bim:Book>
+      </bim:SearchBookRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://com.example/BIM-WS/InventoryManagementWSPort/SearchBookRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="c4c9aa63-61b6-41f7-82cd-c6bfa151519c" isOneWay="false" action="" name="SearchCategory" bindingOperationName="SearchCategory" type="One-Way" inputName="SearchCategoryRequest" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c7a9cd11-c77f-4db8-86f4-058694e569ee" name="findAll"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BIM-WS/InventoryManagementWS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
+   <soapenv:Header/>
+   <soapenv:Body>
+         <bim:retrieveAllCategories/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://com.example/BIM-WS/InventoryManagementWSPort/SearchCategoryRequest"/><con:wsrmConfig version="1.2"/></con:call><con:call id="dfab9253-8d0d-43be-b57c-13c9ec692147" name="findById"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/BIM-WS/InventoryManagementWS</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <bim:SearchCategoryRequest>\r
+         <bim:category>\r
+            <bim:id>1</bim:id>\r
+         </bim:category>\r
+      </bim:SearchCategoryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://com.example/BIM-WS/InventoryManagementWSPort/SearchCategoryRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
