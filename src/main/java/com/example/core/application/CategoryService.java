@@ -10,7 +10,7 @@ public interface CategoryService {
 
     CategoryEntity findById(Long id);
 
-    void save(CategoryEntity categoryEntity);
+    CategoryEntity save(CategoryEntity categoryEntity);
 
     void deleteById(Long id);
 

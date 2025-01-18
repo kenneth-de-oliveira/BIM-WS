@@ -32,11 +32,13 @@ public class CategoryEndpoint {
 
     @PayloadRoot(namespace = "http://com.example/BIM-WS", localPart = "CategoryRequest")
     @ResponsePayload
-    public void save(@RequestPayload CategoryRequest request) {
+    public CategoryResponse save(@RequestPayload CategoryRequest request) {
 
         var categoryEntity = mapper.toEntity(request);
 
-        service.save(categoryEntity);
+        categoryEntity = service.save(categoryEntity);
+
+        return mapper.toResponse(categoryEntity);
 
     }
 
