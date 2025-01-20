@@ -140,7 +140,7 @@ Para configurar o SOAP UI para testar os endpoints SOAP do Book Inventory Manage
    </SOAP-ENV:Envelope>
     ```
 
-* saveOrUpdate: Salva e atualiza um livro.
+* saveOrUpdate: Salva ou atualiza um livro.
 
     * Request: BookRequest
     * Response: BookResponse
@@ -302,141 +302,141 @@ Para configurar o SOAP UI para testar os endpoints SOAP do Book Inventory Manage
   </soapenv:Envelope>
   ```
 
-  * findById: Busca uma categoria pelo ID.
+* findById: Busca uma categoria pelo ID.
 
-      * Request: SearchCategoryRequest
-      * Response: CategoryResponse
-      * Endpoint: /BIM-WS/InventoryManagementWS
-      * SOAP Action: http://localhost:8080/BIM-WS/InventoryManagementWS
-      * Exemplo de requisição:
-      ```xml
-     <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
-     <soapenv:Header/>
-     <soapenv:Body>
-        <bim:SearchCategoryRequest>
-           <bim:category>
-              <bim:id>1</bim:id>
-           </bim:category>
-        </bim:SearchCategoryRequest>
-     </soapenv:Body>
-    </soapenv:Envelope>
-      ```
-      * Exemplo de resposta:
-      ```xml
-     <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
-     <SOAP-ENV:Header/>
-     <SOAP-ENV:Body>
-        <ns2:CategoryResponse xmlns:ns2="http://com.example/BIM-WS">
-           <ns2:category>
-              <ns2:id>1</ns2:id>
-              <ns2:name>Biography</ns2:name>
-              <ns2:description>Biographical books</ns2:description>
-           </ns2:category>
-        </ns2:CategoryResponse>
-     </SOAP-ENV:Body>
-    </SOAP-ENV:Envelope>
-      ```
+    * Request: SearchCategoryRequest
+    * Response: CategoryResponse
+    * Endpoint: /BIM-WS/InventoryManagementWS
+    * SOAP Action: http://localhost:8080/BIM-WS/InventoryManagementWS
+    * Exemplo de requisição:
+    ```xml
+   <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bim:SearchCategoryRequest>
+         <bim:category>
+            <bim:id>1</bim:id>
+         </bim:category>
+      </bim:SearchCategoryRequest>
+   </soapenv:Body>
+  </soapenv:Envelope>
+    ```
+    * Exemplo de resposta:
+    ```xml
+   <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <SOAP-ENV:Body>
+      <ns2:CategoryResponse xmlns:ns2="http://com.example/BIM-WS">
+         <ns2:category>
+            <ns2:id>1</ns2:id>
+            <ns2:name>Biography</ns2:name>
+            <ns2:description>Biographical books</ns2:description>
+         </ns2:category>
+      </ns2:CategoryResponse>
+   </SOAP-ENV:Body>
+  </SOAP-ENV:Envelope>
+    ```
 
-    * save: Salva uma categoria.
+* save: Salva uma categoria.
 
-        * Request: CategoryRequest
-        * Response: CategoryResponse
-        * Endpoint: /BIM-WS/InventoryManagementWS
-        * SOAP Action: http://localhost:8080/BIM-WS/InventoryManagementWS
-        * Exemplo de requisição:
-        ```xml
-       <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
-       <soapenv:Header/>
+    * Request: CategoryRequest
+    * Response: CategoryResponse
+    * Endpoint: /BIM-WS/InventoryManagementWS
+    * SOAP Action: http://localhost:8080/BIM-WS/InventoryManagementWS
+    * Exemplo de requisição:
+    ```xml
+   <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bim:CategoryRequest>
+         <bim:category>
+            <bim:name>Biography</bim:name>
+            <bim:description>Biographical books</bim:description>
+         </bim:category>
+      </bim:CategoryRequest>
+   </soapenv:Body>
+  </soapenv:Envelope>
+    ```
+    * Exemplo de resposta:
+    ```xml
+   <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <SOAP-ENV:Body>
+      <ns2:CategoryResponse xmlns:ns2="http://com.example/BIM-WS">
+         <ns2:category>
+            <ns2:id>1</ns2:id>
+            <ns2:name>Biography</ns2:name>
+            <ns2:description>Biographical books</ns2:description>
+         </ns2:category>
+      </ns2:CategoryResponse>
+   </SOAP-ENV:Body>
+  </SOAP-ENV:Envelope>
+    ```  
+
+* retrieveAllCategories: Recupera todas as categorias.
+
+    * Response: CategoryResponse
+    * Endpoint: /BIM-WS/InventoryManagementWS
+    * SOAP Action: http://localhost:8080/BIM-WS/InventoryManagementWS
+    * Exemplo de requisição:
+    ```xml
+      <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
+      <soapenv:Header/>
        <soapenv:Body>
-          <bim:CategoryRequest>
-             <bim:category>
-                <bim:name>Biography</bim:name>
-                <bim:description>Biographical books</bim:description>
-             </bim:category>
-          </bim:CategoryRequest>
-       </soapenv:Body>
-      </soapenv:Envelope>
-        ```
-        * Exemplo de resposta:
-        ```xml
-       <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
-       <SOAP-ENV:Header/>
-       <SOAP-ENV:Body>
-          <ns2:CategoryResponse xmlns:ns2="http://com.example/BIM-WS">
-             <ns2:category>
-                <ns2:id>1</ns2:id>
-                <ns2:name>Biography</ns2:name>
-                <ns2:description>Biographical books</ns2:description>
-             </ns2:category>
-          </ns2:CategoryResponse>
-       </SOAP-ENV:Body>
-      </SOAP-ENV:Envelope>
-        ```  
-
-        * retrieveAllCategories: Recupera todas as categorias.
-
-            * Response: CategoryResponse
-            * Endpoint: /BIM-WS/InventoryManagementWS
-            * SOAP Action: http://localhost:8080/BIM-WS/InventoryManagementWS
-            * Exemplo de requisição:
-            ```xml
-              <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
-              <soapenv:Header/>
-               <soapenv:Body>
-                    <bim:retrieveAllCategories/>
-               </soapenv:Body>   
-              </soapenv:Envelope>  
-            ``` 
-            * Exemplo de resposta:
-            ```xml
-           <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
-           <SOAP-ENV:Header/>
-           <SOAP-ENV:Body>
-             <ns2:CategoryResponse xmlns:ns2="http://com.example/BIM-WS">
-             <ns2:category>
-                <ns2:id>1</ns2:id>
-                <ns2:name>Informatica</ns2:name>
-                <ns2:description>bla, bla, bla</ns2:description>
-             </ns2:category>
-             <ns2:category>
-                <ns2:id>2</ns2:id>
-                <ns2:name>DevOps</ns2:name>
-                <ns2:description>bla, bla, bla</ns2:description>
-             </ns2:category>
-             <ns2:category>
-                <ns2:id>3</ns2:id>
-                <ns2:name>Design</ns2:name>
-                <ns2:description>bla, bla, bla</ns2:description>
-             </ns2:category>
-             <ns2:category>
-                <ns2:id>4</ns2:id>
-                <ns2:name>Architecture</ns2:name>
-                <ns2:description>bla, bla, bla</ns2:description>
-             </ns2:category>
-             <ns2:category>
-                <ns2:id>5</ns2:id>
-                <ns2:name>Design Patterns</ns2:name>
-                <ns2:description>bla, bla, bla</ns2:description>
-             </ns2:category>
-             <ns2:category>
-                <ns2:id>6</ns2:id>
-                <ns2:name>Concurrency</ns2:name>
-                <ns2:description>bla, bla, bla</ns2:description>
-             </ns2:category>
-             <ns2:category>
-                <ns2:id>7</ns2:id>
-                <ns2:name>JavaScript</ns2:name>
-                <ns2:description>bla, bla, bla</ns2:description>
-             </ns2:category>
-             <ns2:category>
-                <ns2:id>8</ns2:id>
-                <ns2:name>Software Engineering</ns2:name>
-                <ns2:description>bla, bla, bla</ns2:description>
-             </ns2:category>
-            </ns2:CategoryResponse>
-           </SOAP-ENV:Body>
-          </SOAP-ENV:Envelope>
-            ```
+            <bim:retrieveAllCategories/>
+       </soapenv:Body>   
+      </soapenv:Envelope>  
+    ``` 
+    * Exemplo de resposta:
+    ```xml
+   <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header/>
+   <SOAP-ENV:Body>
+     <ns2:CategoryResponse xmlns:ns2="http://com.example/BIM-WS">
+     <ns2:category>
+        <ns2:id>1</ns2:id>
+        <ns2:name>Informatica</ns2:name>
+        <ns2:description>bla, bla, bla</ns2:description>
+     </ns2:category>
+     <ns2:category>
+        <ns2:id>2</ns2:id>
+        <ns2:name>DevOps</ns2:name>
+        <ns2:description>bla, bla, bla</ns2:description>
+     </ns2:category>
+     <ns2:category>
+        <ns2:id>3</ns2:id>
+        <ns2:name>Design</ns2:name>
+        <ns2:description>bla, bla, bla</ns2:description>
+     </ns2:category>
+     <ns2:category>
+        <ns2:id>4</ns2:id>
+        <ns2:name>Architecture</ns2:name>
+        <ns2:description>bla, bla, bla</ns2:description>
+     </ns2:category>
+     <ns2:category>
+        <ns2:id>5</ns2:id>
+        <ns2:name>Design Patterns</ns2:name>
+        <ns2:description>bla, bla, bla</ns2:description>
+     </ns2:category>
+     <ns2:category>
+        <ns2:id>6</ns2:id>
+        <ns2:name>Concurrency</ns2:name>
+        <ns2:description>bla, bla, bla</ns2:description>
+     </ns2:category>
+     <ns2:category>
+        <ns2:id>7</ns2:id>
+        <ns2:name>JavaScript</ns2:name>
+        <ns2:description>bla, bla, bla</ns2:description>
+     </ns2:category>
+     <ns2:category>
+        <ns2:id>8</ns2:id>
+        <ns2:name>Software Engineering</ns2:name>
+        <ns2:description>bla, bla, bla</ns2:description>
+     </ns2:category>
+    </ns2:CategoryResponse>
+   </SOAP-ENV:Body>
+  </SOAP-ENV:Envelope>
+    ```
 
 ## Logs Arquivados
 
