@@ -1,10 +1,11 @@
 # Book Inventory Manager - BIM
 
-## Descrição do Projeto
+## Descriï¿½ï¿½o do Projeto
 
-O Book Inventory Manager (BIM) é uma aplicação desenvolvida em Java utilizando o framework Spring Boot. O objetivo do
-projeto é gerenciar um inventário de livros, permitindo operações como adicionar, atualizar, buscar e deletar livros e
+O Book Inventory Manager (BIM) ï¿½ uma aplicaï¿½ï¿½o desenvolvida em Java utilizando o framework Spring Boot. O objetivo do
+projeto ï¿½ gerenciar um inventï¿½rio de livros, permitindo operaï¿½ï¿½es como adicionar, atualizar, buscar e deletar livros e
 categorias.
+
 
 ## Tecnologias Utilizadas
 
@@ -20,64 +21,64 @@ categorias.
 
 * Java 21
 * Maven 3.6.3 ou superior
-* Docker (opcional, para executar o banco de dados MySQL em contêiner)
+* Docker (opcional, para executar o banco de dados MySQL em contï¿½iner)
 
-## Configuração do Ambiente
+## Configuraï¿½ï¿½o do Ambiente
 
-### Clonando o Repositório
+### Clonando o Repositï¿½rio
 
 ```bash
   git clone git@github.com:kenneth-de-oliveira/BIM-WS.git
 ```
 
-### Instalando as Dependências
+### Instalando as Dependï¿½ncias
 
 ```bash
   mvn clean install
 ```
 
-## Configuração do Banco de Dados
+## Configuraï¿½ï¿½o do Banco de Dados
 
 ### Ambiente de Desenvolvimento
 
-O projeto está configurado para usar o banco de dados H2 em memória no ambiente de desenvolvimento. As configurações
-estão no arquivo src/main/resources/application-dev.yml.
+O projeto estï¿½ configurado para usar o banco de dados H2 em memï¿½ria no ambiente de desenvolvimento. As configuraï¿½ï¿½es
+estï¿½o no arquivo src/main/resources/application-dev.yml.
 
-### Ambiente de Produção
+### Ambiente de Produï¿½ï¿½o
 
-Para o ambiente de produção, o projeto está configurado para usar o banco de dados MySQL. As configurações estão no
-arquivo src/main/resources/application-prod.yml. Você pode usar variáveis de ambiente para configurar o banco de dados:
+Para o ambiente de produï¿½ï¿½o, o projeto estï¿½ configurado para usar o banco de dados MySQL. As configuraï¿½ï¿½es estï¿½o no
+arquivo src/main/resources/application-prod.yml. Vocï¿½ pode usar variï¿½veis de ambiente para configurar o banco de dados:
 
-* DB_HOST: Host do banco de dados (padrão: localhost)
-* DB_PORT: Porta do banco de dados (padrão: 3306)
-* DB_NAME: Nome do banco de dados (padrão: banco)
-* DB_USERNAME: Nome de usuário do banco de dados (padrão: root)
-* DB_PASSWORD: Senha do banco de dados (padrão: root)
+* DB_HOST: Host do banco de dados (padrï¿½o: localhost)
+* DB_PORT: Porta do banco de dados (padrï¿½o: 3306)
+* DB_NAME: Nome do banco de dados (padrï¿½o: banco)
+* DB_USERNAME: Nome de usuï¿½rio do banco de dados (padrï¿½o: root)
+* DB_PASSWORD: Senha do banco de dados (padrï¿½o: root)
 
-## Executando a Aplicação
+## Executando a Aplicaï¿½ï¿½o
 
-Para executar a aplicação, use o seguinte comando:
+Para executar a aplicaï¿½ï¿½o, use o seguinte comando:
 
 ```bash
   mvn spring-boot:run
 ```
 
-O WSDL da aplicação estará disponível em http://localhost:8080/BIM-WS/InventoryManagementWS.wsdl
+O WSDL da aplicaï¿½ï¿½o estarï¿½ disponï¿½vel em http://localhost:8080/BIM-WS/InventoryManagementWS.wsdl
 
-## Configuração do SOAP UI
+## Configuraï¿½ï¿½o do SOAP UI
 
 Para configurar o SOAP UI para testar os endpoints SOAP do Book Inventory Manager (BIM), siga os passos abaixo:
 
 1. Baixe e instale o SOAP UI:
-    * Acesse o site oficial do SOAP UI e baixe a versão mais recente.
-    * Siga as instruções de instalação fornecidas no site.
+    * Acesse o site oficial do SOAP UI e baixe a versï¿½o mais recente.
+    * Siga as instruï¿½ï¿½es de instalaï¿½ï¿½o fornecidas no site.
 
 2. Importe o projeto SOAP UI:
     * Abra o SOAP UI.
     * Clique em File > Import Project.
-    * Selecione o arquivo InventoryManagementWS-soapui-project.xml localizado no diretório raiz do projeto.
+    * Selecione o arquivo InventoryManagementWS-soapui-project.xml localizado no diretï¿½rio raiz do projeto.
 
-## Utilização dos Controladores SOAP
+## Utilizaï¿½ï¿½o dos Controladores SOAP
 
 ### BookEndpoint
 
@@ -86,7 +87,7 @@ Para configurar o SOAP UI para testar os endpoints SOAP do Book Inventory Manage
     * Request: DeleteBookRequest
     * Endpoint: /BIM-WS/InventoryManagementWS
     * SOAP Action: http://localhost:8080/BIM-WS/InventoryManagementWS
-    * Exemplo de requisição:
+    * Exemplo de requisiï¿½ï¿½o:
   ```xml
    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
    <soapenv:Header/>
@@ -104,7 +105,7 @@ Para configurar o SOAP UI para testar os endpoints SOAP do Book Inventory Manage
     * Response: BookResponse
     * Endpoint: /BIM-WS/InventoryManagementWS
     * SOAP Action: http://localhost:8080/BIM-WS/InventoryManagementWS
-    * Exemplo de requisição:
+    * Exemplo de requisiï¿½ï¿½o:
     ```xml
    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
    <soapenv:Header/>
@@ -146,7 +147,7 @@ Para configurar o SOAP UI para testar os endpoints SOAP do Book Inventory Manage
     * Response: BookResponse
     * Endpoint: /BIM-WS/InventoryManagementWS
     * SOAP Action: http://localhost:8080/BIM-WS/InventoryManagementWS
-    * Exemplo de requisição:
+    * Exemplo de requisiï¿½ï¿½o:
   ```xml
   <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
    <soapenv:Header/>
@@ -169,7 +170,7 @@ Para configurar o SOAP UI para testar os endpoints SOAP do Book Inventory Manage
     * Response: BookResponse
     * Endpoint: /BIM-WS/InventoryManagementWS
     * SOAP Action: http://localhost:8080/BIM-WS/InventoryManagementWS
-    * Exemplo de requisição:
+    * Exemplo de requisiï¿½ï¿½o:
     ```xml
     <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
      <soapenv:Header/>
@@ -290,7 +291,7 @@ Para configurar o SOAP UI para testar os endpoints SOAP do Book Inventory Manage
     * Request: DeleteCategoryRequest
     * Endpoint: /BIM-WS/InventoryManagementWS
     * SOAP Action: http://localhost:8080/BIM-WS/InventoryManagementWS
-    * Exemplo de requisição:
+    * Exemplo de requisiï¿½ï¿½o:
   ```xml
   <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
    <soapenv:Header/>
@@ -308,7 +309,7 @@ Para configurar o SOAP UI para testar os endpoints SOAP do Book Inventory Manage
     * Response: CategoryResponse
     * Endpoint: /BIM-WS/InventoryManagementWS
     * SOAP Action: http://localhost:8080/BIM-WS/InventoryManagementWS
-    * Exemplo de requisição:
+    * Exemplo de requisiï¿½ï¿½o:
     ```xml
    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
    <soapenv:Header/>
@@ -343,7 +344,7 @@ Para configurar o SOAP UI para testar os endpoints SOAP do Book Inventory Manage
     * Response: CategoryResponse
     * Endpoint: /BIM-WS/InventoryManagementWS
     * SOAP Action: http://localhost:8080/BIM-WS/InventoryManagementWS
-    * Exemplo de requisição:
+    * Exemplo de requisiï¿½ï¿½o:
     ```xml
    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
    <soapenv:Header/>
@@ -378,7 +379,7 @@ Para configurar o SOAP UI para testar os endpoints SOAP do Book Inventory Manage
     * Response: CategoryResponse
     * Endpoint: /BIM-WS/InventoryManagementWS
     * SOAP Action: http://localhost:8080/BIM-WS/InventoryManagementWS
-    * Exemplo de requisição:
+    * Exemplo de requisiï¿½ï¿½o:
     ```xml
       <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bim="http://com.example/BIM-WS">
       <soapenv:Header/>
@@ -440,13 +441,13 @@ Para configurar o SOAP UI para testar os endpoints SOAP do Book Inventory Manage
 
 ## Logs Arquivados
 
-O projeto está configurado para arquivar logs diariamente. Os logs arquivados são armazenados no diretório
-`./logs/archived/` com o padrão de nome `spring-boot-logger-YYYY-MM-DD.log`.
+O projeto estï¿½ configurado para arquivar logs diariamente. Os logs arquivados sï¿½o armazenados no diretï¿½rio
+`./logs/archived/` com o padrï¿½o de nome `spring-boot-logger-YYYY-MM-DD.log`.
 
-### Configuração do Logback
+### Configuraï¿½ï¿½o do Logback
 
-A configuração do Logback para arquivamento de logs está definida no arquivo `src/main/resources/logback-spring.xml`.
-Abaixo está um exemplo de configuração:
+A configuraï¿½ï¿½o do Logback para arquivamento de logs estï¿½ definida no arquivo `src/main/resources/logback-spring.xml`.
+Abaixo estï¿½ um exemplo de configuraï¿½ï¿½o:
 
 ```xml
 
