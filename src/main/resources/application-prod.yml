@@ -10,3 +10,12 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: 'true'
+
+#### Service Discovery Configuration ####
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE}
+  instance:
+    prefer-ip-address: true

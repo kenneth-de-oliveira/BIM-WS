@@ -1,0 +1,569 @@
+2025-09-27 14:15:32,750 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.2.Final
+2025-09-27 14:15:32,839 INFO o.s.b.StartupInfoLogger [main] Starting Bootstrap using Java 21 with PID 31616 (C:\Users\koliveiras\workspace-study\BIM-WS\target\classes started by koliveiras in C:\Users\koliveiras\workspace-study\BIM-WS)
+2025-09-27 14:15:32,839 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-09-27 14:15:32,840 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "dev"
+2025-09-27 14:15:33,779 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-27 14:15:33,888 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 90 ms. Found 2 JPA repository interfaces.
+2025-09-27 14:15:34,155 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'wsConfig' of type [com.example.api.soap.config.WsConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [annotationActionEndpointMapping]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-09-27 14:15:34,155 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-09-27 14:15:34,186 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'loggerHandler' of type [com.example.shared.util.LoggerHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [annotationActionEndpointMapping]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-09-27 14:15:34,186 INFO o.s.w.s.a.s.AbstractAddressingEndpointMapping [main] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-27 14:15:34,686 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2025-09-27 14:15:34,702 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-27 14:15:34,702 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2025-09-27 14:15:34,702 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-09-27 14:15:34,812 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2025-09-27 14:15:34,812 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1937 ms
+2025-09-27 14:15:34,954 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-09-27 14:15:35,194 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2025-09-27 14:15:35,194 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-09-27 14:15:35,288 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-27 14:15:35,416 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-09-27 14:15:35,495 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-09-27 14:15:35,960 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-27 14:15:36,071 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-27 14:15:37,186 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-27 14:15:37,234 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-27 14:15:37,859 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-27 14:15:38,220 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-27 14:15:38,800 INFO o.s.b.a.h.H2ConsoleAutoConfiguration$H2ConsoleLogger [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
+2025-09-27 14:15:38,910 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-09-27 14:15:38,973 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path '/'
+2025-09-27 14:15:38,988 INFO o.s.b.StartupInfoLogger [main] Started Bootstrap in 6.872 seconds (process running for 7.734)
+2025-09-27 14:15:49,513 INFO o.a.j.l.DirectJDKLog [tomcat-handler-0] Initializing Spring MessageDispatcherServlet 'servletConfiguration'
+2025-09-27 14:15:49,513 INFO o.s.w.s.FrameworkServlet [tomcat-handler-0] Initializing Servlet 'servletConfiguration'
+2025-09-27 14:15:49,513 INFO o.s.w.s.s.SaajSoapMessageFactory [tomcat-handler-0] Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2025-09-27 14:15:49,544 INFO o.s.w.s.FrameworkServlet [tomcat-handler-0] Completed initialization in 31 ms
+2025-09-27 14:17:51,786 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.2.Final
+2025-09-27 14:17:51,887 INFO o.s.b.StartupInfoLogger [main] Starting Bootstrap using Java 21 with PID 34008 (C:\Users\koliveiras\workspace-study\BIM-WS\target\classes started by koliveiras in C:\Users\koliveiras\workspace-study\BIM-WS)
+2025-09-27 14:17:51,887 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-09-27 14:17:51,887 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "dev"
+2025-09-27 14:17:53,241 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-27 14:17:53,382 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 116 ms. Found 2 JPA repository interfaces.
+2025-09-27 14:17:53,713 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'wsConfig' of type [com.example.api.soap.config.WsConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [annotationActionEndpointMapping]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-09-27 14:17:53,713 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-09-27 14:17:53,744 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'loggerHandler' of type [com.example.shared.util.LoggerHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [annotationActionEndpointMapping]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-09-27 14:17:53,744 INFO o.s.w.s.a.s.AbstractAddressingEndpointMapping [main] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-27 14:17:54,391 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2025-09-27 14:17:54,419 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-27 14:17:54,419 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2025-09-27 14:17:54,419 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-09-27 14:17:54,560 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2025-09-27 14:17:54,560 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2597 ms
+2025-09-27 14:17:54,733 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-09-27 14:17:55,000 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2025-09-27 14:17:55,015 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-09-27 14:17:55,094 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-27 14:17:55,193 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-09-27 14:17:55,236 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-09-27 14:17:55,597 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-27 14:17:55,694 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-27 14:17:56,884 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-27 14:17:56,947 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-27 14:17:57,403 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-27 14:17:57,638 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-27 14:17:58,046 INFO o.s.b.a.h.H2ConsoleAutoConfiguration$H2ConsoleLogger [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
+2025-09-27 14:17:58,140 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-09-27 14:17:58,234 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path '/'
+2025-09-27 14:17:58,234 INFO o.s.b.StartupInfoLogger [main] Started Bootstrap in 7.571 seconds (process running for 9.258)
+2025-09-27 14:21:08,233 INFO o.a.j.l.DirectJDKLog [tomcat-handler-0] Initializing Spring MessageDispatcherServlet 'servletConfiguration'
+2025-09-27 14:21:08,235 INFO o.s.w.s.FrameworkServlet [tomcat-handler-0] Initializing Servlet 'servletConfiguration'
+2025-09-27 14:21:08,241 INFO o.s.w.s.s.SaajSoapMessageFactory [tomcat-handler-0] Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2025-09-27 14:21:08,262 INFO o.s.w.s.FrameworkServlet [tomcat-handler-0] Completed initialization in 27 ms
+2025-09-27 14:49:34,854 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.2.Final
+2025-09-27 14:49:34,981 INFO o.s.b.StartupInfoLogger [main] Starting Bootstrap using Java 21 with PID 49804 (C:\Users\koliveiras\workspace-study\BIM-WS\target\classes started by koliveiras in C:\Users\koliveiras\workspace-study\BIM-WS)
+2025-09-27 14:49:34,981 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-09-27 14:49:34,997 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "dev"
+2025-09-27 14:49:37,158 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-27 14:49:37,473 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 268 ms. Found 2 JPA repository interfaces.
+2025-09-27 14:49:38,164 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'wsConfig' of type [com.example.api.soap.config.WsConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [annotationActionEndpointMapping]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-09-27 14:49:38,164 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-09-27 14:49:38,258 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'loggerHandler' of type [com.example.shared.util.LoggerHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [annotationActionEndpointMapping]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-09-27 14:49:38,274 INFO o.s.w.s.a.s.AbstractAddressingEndpointMapping [main] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-27 14:49:39,468 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2025-09-27 14:49:39,500 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-27 14:49:39,515 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2025-09-27 14:49:39,515 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-09-27 14:49:39,815 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2025-09-27 14:49:39,815 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4694 ms
+2025-09-27 14:49:40,505 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-09-27 14:49:41,237 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2025-09-27 14:49:41,253 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-09-27 14:49:41,400 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-27 14:49:41,621 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-09-27 14:49:41,747 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-09-27 14:49:42,485 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-27 14:49:42,689 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-27 14:49:44,745 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-27 14:49:44,858 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-27 14:49:45,376 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-27 14:49:45,904 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-27 14:49:46,499 INFO o.s.b.a.h.H2ConsoleAutoConfiguration$H2ConsoleLogger [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
+2025-09-27 14:49:46,591 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-09-27 14:49:46,766 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path '/'
+2025-09-27 14:49:46,791 INFO o.s.b.StartupInfoLogger [main] Started Bootstrap in 13.549 seconds (process running for 15.882)
+2025-09-27 14:52:32,432 INFO o.a.j.l.DirectJDKLog [tomcat-handler-0] Initializing Spring MessageDispatcherServlet 'servletConfiguration'
+2025-09-27 14:52:32,432 INFO o.s.w.s.FrameworkServlet [tomcat-handler-0] Initializing Servlet 'servletConfiguration'
+2025-09-27 14:52:32,442 INFO o.s.w.s.s.SaajSoapMessageFactory [tomcat-handler-0] Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2025-09-27 14:52:32,466 INFO o.s.w.s.FrameworkServlet [tomcat-handler-0] Completed initialization in 33 ms
+2025-09-27 14:52:32,649 INFO c.e.s.u.LoggerHandler [tomcat-handler-0] Received request ==> <?xml version="1.0" encoding="UTF-8"?><CategoryRequest xmlns="http://com.example/BIM-WS"><category><id>0</id><name>Programming</name><description>Best practices and principles for writing clean, maintainable code.</description></category></CategoryRequest>
+2025-09-27 14:52:33,012 INFO c.e.s.u.LoggerHandler [tomcat-handler-0] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:CategoryResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:category>
+    <ns2:id>1</ns2:id>
+    <ns2:name>Programming</ns2:name>
+    <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+  </ns2:category>
+</ns2:CategoryResponse>
+
+2025-09-27 14:52:33,012 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-0] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@bdac96e
+2025-09-27 14:52:33,117 INFO c.e.s.u.LoggerHandler [tomcat-handler-1] Received request ==> <?xml version="1.0" encoding="UTF-8"?><BookRequest xmlns="http://com.example/BIM-WS"><Book><id>0</id><title>Clean Code</title><authorName>Robert C. Martin</authorName><text>A Handbook of Agile Software Craftsmanship.</text><isbn>9780132350884</isbn><categoryId>1</categoryId></Book></BookRequest>
+2025-09-27 14:52:33,303 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-1] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@3b5b800c
+2025-09-27 14:52:44,463 INFO c.e.s.u.LoggerHandler [tomcat-handler-2] Received request ==> <?xml version="1.0" encoding="UTF-8"?><retrieveAllBooks xmlns="http://com.example/BIM-WS"/>
+2025-09-27 14:52:44,544 INFO c.e.s.u.LoggerHandler [tomcat-handler-2] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 14:52:44,545 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-2] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@1f0c6ae6
+2025-09-27 14:54:57,131 INFO c.e.s.u.LoggerHandler [tomcat-handler-4] Received request ==> <?xml version="1.0" encoding="UTF-8"?><retrieveAllBooks xmlns="http://com.example/BIM-WS"/>
+2025-09-27 14:54:57,136 INFO c.e.s.u.LoggerHandler [tomcat-handler-4] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 14:54:57,136 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-4] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@4b7c7be
+2025-09-27 14:55:36,335 INFO c.e.s.u.LoggerHandler [tomcat-handler-5] Received request ==> <?xml version="1.0" encoding="UTF-8"?><SearchBookRequest xmlns="http://com.example/BIM-WS"><Book><id>0</id><isbn>9780132350884</isbn></Book></SearchBookRequest>
+2025-09-27 14:55:36,357 INFO c.e.s.u.LoggerHandler [tomcat-handler-5] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 14:55:36,357 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-5] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@5baeb9c1
+2025-09-27 14:56:05,114 INFO c.e.s.u.LoggerHandler [tomcat-handler-6] Received request ==> <?xml version="1.0" encoding="UTF-8"?><retrieveAllBooks xmlns="http://com.example/BIM-WS"/>
+2025-09-27 14:56:05,114 INFO c.e.s.u.LoggerHandler [tomcat-handler-6] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 14:56:05,114 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-6] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@76ff79c2
+2025-09-27 14:56:12,260 INFO c.e.s.u.LoggerHandler [tomcat-handler-7] Received request ==> <?xml version="1.0" encoding="UTF-8"?><retrieveAllBooks xmlns="http://com.example/BIM-WS"/>
+2025-09-27 14:56:12,265 INFO c.e.s.u.LoggerHandler [tomcat-handler-7] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 14:56:12,266 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-7] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@381817fb
+2025-09-27 15:16:55,778 INFO c.e.s.u.LoggerHandler [tomcat-handler-13] Received request ==> <?xml version="1.0" encoding="UTF-8"?><SearchBookRequest xmlns="http://com.example/BIM-WS"><Book><id>0</id><isbn>9780132350884</isbn></Book></SearchBookRequest>
+2025-09-27 15:16:55,784 INFO c.e.s.u.LoggerHandler [tomcat-handler-13] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 15:16:55,785 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-13] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@5e919f44
+2025-09-27 15:17:20,209 INFO c.e.s.u.LoggerHandler [tomcat-handler-14] Received request ==> <?xml version="1.0" encoding="UTF-8"?><retrieveAllBooks xmlns="http://com.example/BIM-WS"/>
+2025-09-27 15:17:20,214 INFO c.e.s.u.LoggerHandler [tomcat-handler-14] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 15:17:20,214 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-14] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@77faecf0
+2025-09-27 15:26:27,604 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.2.Final
+2025-09-27 15:26:27,778 INFO o.s.b.StartupInfoLogger [main] Starting Bootstrap using Java 21 with PID 21968 (C:\Users\koliveiras\workspace-study\BIM-WS\target\classes started by koliveiras in C:\Users\koliveiras\workspace-study\BIM-WS)
+2025-09-27 15:26:27,784 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-09-27 15:26:27,788 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "dev"
+2025-09-27 15:26:29,666 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-27 15:26:29,897 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 203 ms. Found 2 JPA repository interfaces.
+2025-09-27 15:26:30,535 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'wsConfig' of type [com.example.api.soap.config.WsConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [annotationActionEndpointMapping]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-09-27 15:26:30,538 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-09-27 15:26:30,724 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'loggerHandler' of type [com.example.shared.util.LoggerHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [annotationActionEndpointMapping]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-09-27 15:26:30,731 INFO o.s.w.s.a.s.AbstractAddressingEndpointMapping [main] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-27 15:26:31,835 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2025-09-27 15:26:31,869 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-27 15:26:31,880 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2025-09-27 15:26:31,882 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-09-27 15:26:32,082 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2025-09-27 15:26:32,085 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4155 ms
+2025-09-27 15:26:32,526 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-09-27 15:26:33,470 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2025-09-27 15:26:33,478 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-09-27 15:26:33,745 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-27 15:26:34,037 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-09-27 15:26:34,230 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-09-27 15:26:35,649 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-27 15:26:35,947 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-27 15:26:39,741 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-27 15:26:39,932 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-27 15:26:40,865 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-27 15:26:41,782 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-27 15:26:42,732 INFO o.s.b.a.h.H2ConsoleAutoConfiguration$H2ConsoleLogger [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
+2025-09-27 15:26:42,966 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-09-27 15:26:43,128 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path '/'
+2025-09-27 15:26:43,152 INFO o.s.b.StartupInfoLogger [main] Started Bootstrap in 16.891 seconds (process running for 18.311)
+2025-09-27 15:26:59,590 INFO o.a.j.l.DirectJDKLog [tomcat-handler-0] Initializing Spring MessageDispatcherServlet 'servletConfiguration'
+2025-09-27 15:26:59,590 INFO o.s.w.s.FrameworkServlet [tomcat-handler-0] Initializing Servlet 'servletConfiguration'
+2025-09-27 15:26:59,601 INFO o.s.w.s.s.SaajSoapMessageFactory [tomcat-handler-0] Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2025-09-27 15:26:59,643 INFO o.s.w.s.FrameworkServlet [tomcat-handler-0] Completed initialization in 52 ms
+2025-09-27 15:30:31,549 INFO c.e.s.u.LoggerHandler [tomcat-handler-2] Received request ==> <?xml version="1.0" encoding="UTF-8"?><CategoryRequest xmlns="http://com.example/BIM-WS"><category><id>0</id><name>Programming</name><description>Best practices and principles for writing clean, maintainable code.</description></category></CategoryRequest>
+2025-09-27 15:30:32,470 INFO c.e.s.u.LoggerHandler [tomcat-handler-2] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:CategoryResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:category>
+    <ns2:id>1</ns2:id>
+    <ns2:name>Programming</ns2:name>
+    <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+  </ns2:category>
+</ns2:CategoryResponse>
+
+2025-09-27 15:30:32,472 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-2] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@4457fa0b
+2025-09-27 15:30:32,669 INFO c.e.s.u.LoggerHandler [tomcat-handler-3] Received request ==> <?xml version="1.0" encoding="UTF-8"?><BookRequest xmlns="http://com.example/BIM-WS"><Book><id>0</id><title>Clean Code</title><authorName>Robert C. Martin</authorName><text>A Handbook of Agile Software Craftsmanship.</text><isbn>9780132350884</isbn><categoryId>1</categoryId></Book></BookRequest>
+2025-09-27 15:30:33,165 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-3] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@6f6307e2
+2025-09-27 15:30:37,450 INFO c.e.s.u.LoggerHandler [tomcat-handler-4] Received request ==> <?xml version="1.0" encoding="UTF-8"?><retrieveAllBooks xmlns="http://com.example/BIM-WS"/>
+2025-09-27 15:30:37,608 INFO c.e.s.u.LoggerHandler [tomcat-handler-4] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 15:30:37,609 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-4] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@6d89076b
+2025-09-27 15:30:42,092 INFO c.e.s.u.LoggerHandler [tomcat-handler-5] Received request ==> <?xml version="1.0" encoding="UTF-8"?><SearchBookRequest xmlns="http://com.example/BIM-WS"><Book><id>0</id><isbn>9780132350884</isbn></Book></SearchBookRequest>
+2025-09-27 15:30:42,109 INFO c.e.s.u.LoggerHandler [tomcat-handler-5] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 15:30:42,110 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-5] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@309cb840
+2025-09-27 15:30:51,957 INFO c.e.s.u.LoggerHandler [tomcat-handler-6] Received request ==> <?xml version="1.0" encoding="UTF-8"?><SearchBookRequest xmlns="http://com.example/BIM-WS"><Book><id>0</id><isbn>9780132350884</isbn></Book></SearchBookRequest>
+2025-09-27 15:30:51,962 INFO c.e.s.u.LoggerHandler [tomcat-handler-6] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 15:30:51,963 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-6] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@6068d86c
+2025-09-27 15:31:02,989 INFO c.e.s.u.LoggerHandler [tomcat-handler-7] Received request ==> <?xml version="1.0" encoding="UTF-8"?><SearchBookRequest xmlns="http://com.example/BIM-WS"><Book><id>0</id><isbn>9780132350884</isbn></Book></SearchBookRequest>
+2025-09-27 15:31:02,994 INFO c.e.s.u.LoggerHandler [tomcat-handler-7] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 15:31:02,994 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-7] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@13c1183f
+2025-09-27 15:31:16,182 INFO c.e.s.u.LoggerHandler [tomcat-handler-8] Received request ==> <?xml version="1.0" encoding="UTF-8"?><retrieveAllBooks xmlns="http://com.example/BIM-WS"/>
+2025-09-27 15:31:16,182 INFO c.e.s.u.LoggerHandler [tomcat-handler-8] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 15:31:16,182 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-8] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@41c659d
+2025-09-27 15:53:35,159 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.2.Final
+2025-09-27 15:53:35,317 INFO o.s.b.StartupInfoLogger [main] Starting Bootstrap using Java 21 with PID 12408 (C:\Users\koliveiras\workspace-study\BIM-WS\target\classes started by koliveiras in C:\Users\koliveiras\workspace-study\BIM-WS)
+2025-09-27 15:53:35,318 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.4.1, Spring v6.2.1
+2025-09-27 15:53:35,320 INFO o.s.b.SpringApplication [main] The following 1 profile is active: "dev"
+2025-09-27 15:53:37,070 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-27 15:53:37,459 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 343 ms. Found 2 JPA repository interfaces.
+2025-09-27 15:53:37,953 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'wsConfig' of type [com.example.api.soap.config.WsConfig$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [annotationActionEndpointMapping]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-09-27 15:53:37,955 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-09-27 15:53:38,016 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'loggerHandler' of type [com.example.shared.util.LoggerHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [annotationActionEndpointMapping]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2025-09-27 15:53:38,024 INFO o.s.w.s.a.s.AbstractAddressingEndpointMapping [main] Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2025-09-27 15:53:39,231 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8080 (http)
+2025-09-27 15:53:39,257 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2025-09-27 15:53:39,262 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2025-09-27 15:53:39,263 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-09-27 15:53:39,528 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2025-09-27 15:53:39,530 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4095 ms
+2025-09-27 15:53:39,850 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-09-27 15:53:40,511 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:db user=SA
+2025-09-27 15:53:40,515 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-09-27 15:53:40,630 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-27 15:53:40,790 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-09-27 15:53:40,873 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-09-27 15:53:41,586 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-27 15:53:41,750 INFO o.h.e.j.e.i.JdbcEnvironmentInitiator [main] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-27 15:53:43,951 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-27 15:53:44,102 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-27 15:53:44,710 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-27 15:53:45,055 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-27 15:53:45,540 INFO o.s.b.a.h.H2ConsoleAutoConfiguration$H2ConsoleLogger [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
+2025-09-27 15:53:45,652 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2025-09-27 15:53:45,863 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8080 (http) with context path '/'
+2025-09-27 15:53:45,876 INFO o.s.b.StartupInfoLogger [main] Started Bootstrap in 12.411 seconds (process running for 15.109)
+2025-09-27 15:54:22,070 INFO o.a.j.l.DirectJDKLog [tomcat-handler-0] Initializing Spring MessageDispatcherServlet 'servletConfiguration'
+2025-09-27 15:54:22,070 INFO o.s.w.s.FrameworkServlet [tomcat-handler-0] Initializing Servlet 'servletConfiguration'
+2025-09-27 15:54:22,081 INFO o.s.w.s.s.SaajSoapMessageFactory [tomcat-handler-0] Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+2025-09-27 15:54:22,119 INFO o.s.w.s.FrameworkServlet [tomcat-handler-0] Completed initialization in 49 ms
+2025-09-27 15:57:43,948 INFO c.e.s.u.LoggerHandler [tomcat-handler-4] Received request ==> <?xml version="1.0" encoding="UTF-8"?><CategoryRequest xmlns="http://com.example/BIM-WS"><category><id>0</id><name>Programming</name><description>Best practices and principles for writing clean, maintainable code.</description></category></CategoryRequest>
+2025-09-27 15:57:44,466 INFO c.e.s.u.LoggerHandler [tomcat-handler-4] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:CategoryResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:category>
+    <ns2:id>1</ns2:id>
+    <ns2:name>Programming</ns2:name>
+    <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+  </ns2:category>
+</ns2:CategoryResponse>
+
+2025-09-27 15:57:44,466 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-4] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@6d958592
+2025-09-27 15:57:44,589 INFO c.e.s.u.LoggerHandler [tomcat-handler-5] Received request ==> <?xml version="1.0" encoding="UTF-8"?><BookRequest xmlns="http://com.example/BIM-WS"><Book><id>0</id><title>Clean Code</title><authorName>Robert C. Martin</authorName><text>A Handbook of Agile Software Craftsmanship.</text><isbn>9780132350884</isbn><categoryId>1</categoryId></Book></BookRequest>
+2025-09-27 15:57:44,826 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-5] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@5dc1dba6
+2025-09-27 15:58:11,702 INFO c.e.s.u.LoggerHandler [tomcat-handler-6] Received request ==> <?xml version="1.0" encoding="UTF-8"?><SearchBookRequest xmlns="http://com.example/BIM-WS"><Book><id>0</id><isbn>9780132350884</isbn></Book></SearchBookRequest>
+2025-09-27 15:58:11,806 INFO c.e.s.u.LoggerHandler [tomcat-handler-6] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 15:58:11,806 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-6] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@674a569d
+2025-09-27 16:04:02,831 INFO c.e.s.u.LoggerHandler [tomcat-handler-12] Received request ==> <?xml version="1.0" encoding="UTF-8"?><CategoryRequest xmlns="http://com.example/BIM-WS"><category><id>0</id><name>Programming</name><description>Best practices and principles for writing clean, maintainable code.</description></category></CategoryRequest>
+2025-09-27 16:04:02,838 INFO c.e.s.u.LoggerHandler [tomcat-handler-12] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:CategoryResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:category>
+    <ns2:id>2</ns2:id>
+    <ns2:name>Programming</ns2:name>
+    <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+  </ns2:category>
+</ns2:CategoryResponse>
+
+2025-09-27 16:04:02,838 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-12] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@47bd9c68
+2025-09-27 16:04:02,936 INFO c.e.s.u.LoggerHandler [tomcat-handler-13] Received request ==> <?xml version="1.0" encoding="UTF-8"?><BookRequest xmlns="http://com.example/BIM-WS"><Book><id>0</id><title>Clean Code</title><authorName>Robert C. Martin</authorName><text>A Handbook of Agile Software Craftsmanship.</text><isbn>9780132350884</isbn><categoryId>2</categoryId></Book></BookRequest>
+2025-09-27 16:04:02,968 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-13] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@5db16ddf
+2025-09-27 16:04:08,822 INFO c.e.s.u.LoggerHandler [tomcat-handler-14] Received request ==> <?xml version="1.0" encoding="UTF-8"?><retrieveAllBooks xmlns="http://com.example/BIM-WS"/>
+2025-09-27 16:04:08,830 INFO c.e.s.u.LoggerHandler [tomcat-handler-14] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 16:04:08,830 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-14] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@2ca4e13b
+2025-09-27 16:04:19,384 INFO c.e.s.u.LoggerHandler [tomcat-handler-15] Received request ==> <?xml version="1.0" encoding="UTF-8"?><SearchBookRequest xmlns="http://com.example/BIM-WS"><Book><id>0</id><isbn>9780132350884</isbn></Book></SearchBookRequest>
+2025-09-27 16:04:19,388 INFO c.e.s.u.LoggerHandler [tomcat-handler-15] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 16:04:19,389 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-15] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@399f2847
+2025-09-27 16:05:25,112 INFO c.e.s.u.LoggerHandler [tomcat-handler-17] Received request ==> <?xml version="1.0" encoding="UTF-8"?><SearchBookRequest xmlns="http://com.example/BIM-WS"><Book><id>0</id><isbn>9780132350884</isbn></Book></SearchBookRequest>
+2025-09-27 16:05:25,116 INFO c.e.s.u.LoggerHandler [tomcat-handler-17] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 16:05:25,116 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-17] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@481d9a6d
+2025-09-27 16:05:31,008 INFO c.e.s.u.LoggerHandler [tomcat-handler-18] Received request ==> <?xml version="1.0" encoding="UTF-8"?><retrieveAllBooks xmlns="http://com.example/BIM-WS"/>
+2025-09-27 16:05:31,012 INFO c.e.s.u.LoggerHandler [tomcat-handler-18] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 16:05:31,013 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-18] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@41bff5c6
+2025-09-27 16:05:33,965 INFO c.e.s.u.LoggerHandler [tomcat-handler-19] Received request ==> <?xml version="1.0" encoding="UTF-8"?><retrieveAllBooks xmlns="http://com.example/BIM-WS"/>
+2025-09-27 16:05:33,970 INFO c.e.s.u.LoggerHandler [tomcat-handler-19] Received response ==> <?xml version="1.0" encoding="UTF-8"?><ns2:BookResponse xmlns:ns2="http://com.example/BIM-WS">
+  <ns2:Book>
+    <ns2:id>1</ns2:id>
+    <ns2:title>Clean Code</ns2:title>
+    <ns2:authorName>Robert C. Martin</ns2:authorName>
+    <ns2:text>A Handbook of Agile Software Craftsmanship.</ns2:text>
+    <ns2:isbn>9780132350884</ns2:isbn>
+    <ns2:category>
+      <ns2:id>1</ns2:id>
+      <ns2:name>Programming</ns2:name>
+      <ns2:description>Best practices and principles for writing clean, maintainable code.</ns2:description>
+    </ns2:category>
+  </ns2:Book>
+</ns2:BookResponse>
+
+2025-09-27 16:05:33,970 DEBUG c.e.s.u.LoggerHandler [tomcat-handler-19] Processing completed successfully for message context: org.springframework.ws.context.DefaultMessageContext@1e451867

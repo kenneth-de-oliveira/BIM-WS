@@ -14,3 +14,12 @@ spring:
     console:
       path: /h2-console
       enabled: 'true'
+
+#### Service Discovery Configuration ####
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE:http://localhost:8761/eureka}
+  instance:
+    prefer-ip-address: true

@@ -1,12 +1,12 @@
 server:
-  port: '8080'
+  port: '0'
 
 spring:
   config:
     import: "config.yml"
 
   application:
-    name: BIM-WS
+    name: ms-bim-ws
 
   profiles:
     active: dev
